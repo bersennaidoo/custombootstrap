@@ -1,7 +1,9 @@
 import { Inter } from "next/font/google";
-import "@/styles/styles.scss"; 
+import "@/styles/styles.scss";
 //import "./custom.css";
 import "./globals.css";
+
+import TopNav from "@/components/TopNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,7 +15,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="container-fluid">
+          <TopNav />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
