@@ -4,11 +4,10 @@ import VehicleBrowser from "@/components/VehicleBrowser";
 
 function Home() {
   return (
-    <div>
-      <p>Test</p>
-      <SiteCarousel />
-      <VehicleBrowser />
-    </div>
+      <div className="container">
+            <SiteCarousel />
+            <VehicleBrowser />
+      </div>
   );
 }
 
